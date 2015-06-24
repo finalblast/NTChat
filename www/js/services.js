@@ -31,6 +31,7 @@ angular.module('NTChat.services', ['firebase'])
         getSelectedRoomName: function () {
             var selectedRoom;
             if (selectedRoomId && selectedRoomId != null) {
+                console.log("ID: " + selectedRoomId);
                 selectedRoom = Rooms.get(selectedRoomId);
                 if (selectedRoom)
                     return selectedRoom.name;

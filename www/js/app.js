@@ -9,7 +9,7 @@
 var firebaseUrl = "https://incandescent-torch-4341.firebaseio.com/";
 
 function onDeviceReady() {
-    angular.bootstrap(document, ["mychat"]);
+    angular.bootstrap(document, ["NTChat"]);
 }
 //console.log("binding device ready");
 // Registering onDeviceReady callback with deviceready event
@@ -74,9 +74,8 @@ angular.module('NTChat', ['ionic', 'NTChat.controllers', 'NTChat.services', 'fir
   // setup an abstract state for the login directive
     .state('login', {
     url: "/login",
-    abstract: true,
-    templateUrl: "templates/login.html"
-    controller: "LoginCtrl"
+    templateUrl: "templates/login.html",
+    controller: 'LoginCtrl',
     resolve: {
         // controller will not be loaded until $waitForAuth resolves
         // Auth refers to our $firebaseAuth wrapper in the example above
@@ -92,7 +91,7 @@ angular.module('NTChat', ['ionic', 'NTChat.controllers', 'NTChat.services', 'fir
   .state('tab', {
     url:"/tab",
     abstract: true,
-    templateUrl: "templates/tabs.html"
+    templateUrl: "templates/tabs.html",
     resolve: {
         // controller will not be loaded until $requireAuth resolves
         // Auth refers to our $firebaseAuth wrapper in the example above

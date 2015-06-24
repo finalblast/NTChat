@@ -82,7 +82,7 @@ angular.module('NTChat.controllers', [])
   };
   Chats.selectRoom($state.params.roomId);
   var roomName = Chats.getSelectedRoomName();
-
+  console.log("Room Name: " + roomName);
   // Fetching Chat Records only if a Room is Selected
   if (roomName) {
       $scope.roomName = " - " + roomName;
